@@ -12,14 +12,13 @@ const Add = () => {
         e.preventDefault();
 
         try {
-            const record = await axios.post(`https://apimern-backend.vercel.app/api/v1/addUser`, {
+            const record = await axios.post('http://localhost:8001/api/v1/addUser', {
                 name: name,
                 email: email,
                 password: password
             }, {
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
                 }
             });
             const data = await record.data;
@@ -49,8 +48,8 @@ const Add = () => {
                             <td><input type="text" onChange={(e) => setEmail(e.target.value)} value={email} /></td>
                         </tr>
                         <tr>
-                            <td>Password :</td>
-                            <td><input type="password" onChange={(e) => setPassword(e.target.value)} value={password} /></td>
+                            <td>Name :</td>
+                            <td><input type="text" onChange={(e) => setPassword(e.target.value)} value={password} /></td>
                         </tr>
                         <tr>
                             <td></td>
