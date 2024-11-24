@@ -12,7 +12,7 @@ const Add = () => {
         e.preventDefault();
 
         try {
-            const record = await axios.post('http://localhost:8001/api/v1/addUser', {
+            const record = await axios.post(`https://apimern-backend.vercel.app/api/v1/addUser`, {
                 name: name,
                 email: email,
                 password: password
