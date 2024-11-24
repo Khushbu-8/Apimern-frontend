@@ -20,7 +20,7 @@ const Add = () => {
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json',
-                    'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',                }
+                }
             });
             const data = await record.data;
             console.log(data);
@@ -49,8 +49,8 @@ const Add = () => {
                             <td><input type="text" onChange={(e) => setEmail(e.target.value)} value={email} /></td>
                         </tr>
                         <tr>
-                            <td>Name :</td>
-                            <td><input type="text" onChange={(e) => setPassword(e.target.value)} value={password} /></td>
+                            <td>Password :</td>
+                            <td><input type="password" onChange={(e) => setPassword(e.target.value)} value={password} /></td>
                         </tr>
                         <tr>
                             <td></td>
