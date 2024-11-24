@@ -18,8 +18,9 @@ const Add = () => {
                 password: password
             }, {
                 headers: {
-                    'Content-Type': 'application/json'
-                }
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',                }
             });
             const data = await record.data;
             console.log(data);
