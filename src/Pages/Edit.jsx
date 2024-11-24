@@ -14,7 +14,7 @@ const Edit = () => {
         e.preventDefault();
 
         try {
-            const record = await fetch(`http://localhost:8000/api/v1/updateUser`,{
+            const record = await fetch(`https://apimern-backend.vercel.app/api/v1/updateUser`,{
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

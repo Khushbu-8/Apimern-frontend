@@ -7,7 +7,7 @@ const View = () => {
 
     const FetchData = async() =>{
         try {
-            const record = await fetch(`http://localhost:8000/api/v1/viewUser`,{
+            const record = await fetch(`https://apimern-backend.vercel.app/api/v1/viewUser`,{
                 method: 'GET',
             })
             const data = await record.json()
@@ -28,7 +28,7 @@ const View = () => {
 
    const DeletUser = async(id) =>{
         try {
-            const record = await fetch(`http://localhost:8000/api/v1/deleteUser?deleteid=${id}`,{
+            const record = await fetch(`https://apimern-backend.vercel.app/api/v1/deleteUser?deleteid=${id}`,{
                 method: 'DELETE',
 
             })
